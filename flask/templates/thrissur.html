@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1>Restaurants in Thrissur districts</h1>
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>ph_no</th>
+                <th>workin_hr</th>
+                <th>parkin_ava</th>
+                <th>dine_in_ava</th>      
+                <th>veg_or_nonveg</th>
+            </tr>
+            <tbody>
+                {% for i in sqldata %}
+                <tr>
+                    <td>{{i[0]}}</td>
+                    <td>{{i[1]}}</td>
+                    <td>{{i[2]}}</td>
+                    <td>{{i[3]}}</td>
+                    <td>{{i[4]}}</td>
+                    <td>{{i[5]}}</td>
+                    <td>{{i[6]}}</td>
+                    <td>{{i[7]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </thead>
+    </table>
+</body>
+</html>
